@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Quizzler-iOS13
-//
-//  Created by Angela Yu on 12/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -16,23 +8,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
     
+    //Question Array
     let quiz = [
-        "Four + Two is equal to Six.",
-        "Five - Three is greater than one",
-        "Three + Eight is less than Ten"
+        ["Four + Two is equal to Six.", "True"],
+        ["Five - Three is greater than one", "True"],
+        ["Three + Eight is less than Ten", "False"]
     ]
+    
+    var questionNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         questionLabel.text = quiz[0]
     }
     //action for the answer buttons
     @IBAction func answerButtonPressed(_ sender: Any) {
     
-    
+        questionNumber += 1
+        updateUI()
     }
-    
-
+    func updateUI() {
+        questionLabel.text = quiz[questionNumber]
+    }
 }
 
