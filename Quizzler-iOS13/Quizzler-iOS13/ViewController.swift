@@ -19,16 +19,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionLabel.text = quiz[0]
+        updateUI()
     }
     //action for the answer buttons
     @IBAction func answerButtonPressed(_ sender: Any) {
     
+        let userAnswer = (sender as AnyObject).currentTitle
+        let actualAnswer = quiz[questionNumber][1]
+        if userAnswer == actualAnswer {
+            print("Right!")
+        } else {
+            print("Wrong!")
+        }
         questionNumber += 1
         updateUI()
     }
     func updateUI() {
-        questionLabel.text = quiz[questionNumber]
+        questionLabel.text = quiz[questionNumber][0]
     }
 }
 
