@@ -7,21 +7,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var trueButton: UIButton!
     @IBOutlet weak var progressBar: UIProgressView!
     @IBOutlet weak var questionLabel: UILabel!
-    
-    
+    //Question Array
+    let quiz = [
+        ["Four + Two is equal to Six.", "True"],
+        ["Five - Three is greater than one", "True"],
+        ["Three + Eight is less than Ten", "False"]
+    ]
     var questionNumber = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-        let userAnswer = sender.currentTitle
-        let actualAnswer = quiz[questionNumber].answer
+    @IBAction func answerButtonPressed(_ sender: Any) {
+        let userAnswer = (sender as AnyObject).currentTitle
+        let actualAnswer = quiz[questionNumber][1]
         
         if userAnswer == actualAnswer {
-            sender.backgroundColor = UIColor.green
+            print("Right!")
         } else {
-            sender.backgroundColor = UIColor.red
+            print("Wrong!")
         }
         
         if questionNumber + 1 < quiz.count {
@@ -29,16 +33,11 @@ class ViewController: UIViewController {
         } else if questionNumber <= quiz.count{
             questionNumber = 0
         }
-        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
         
-        
+        updateUI()
     }
-    @objc func updateUI() {
-        questionLabel.text = quiz[questionNumber].text
-        trueButton.backgroundColor = UIColor.clear
-        falseButton.backgroundColor = UIColor.clear
-        progressBar.progress = Float(questionNumber + 1) / Float(quiz.count)
+    func updateUI() {
+        questionLabel.text = quiz[questionNumber][0]
     }
 }
 
- 

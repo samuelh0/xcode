@@ -6,18 +6,12 @@ struct Town {
     func fortify() {
         print("Defences Increased!")
     }
-    init(name: String, citizens: [String], resources: [String: Int]) {
-        self.name = name
-        self.citizens = citizens
-        self.resources = resources
+    init(townName: String, people: [String], stats: [String: Int]) {
+        name = townName
+        citizens = people
+        resources = stats
     }
-    
+
 }
-
-
-var anotherTown = Town(name: "Nameless Island", citizens: ["Tom Hanks"], resources: ["Coconuts": 100])
-anotherTown.citizens.append("Wilson")
-print(anotherTown.citizens)
-var ghostTown = Town(name: "Ghostwn", citizens: [], resources: ["Tumbleweed": 1])
-anotherTown
-ghostTown.fortify()
+var anotherTown = Town(townName: "samland", people: "me", "myself", "and i", stats: "Coconut": 69)
+an
