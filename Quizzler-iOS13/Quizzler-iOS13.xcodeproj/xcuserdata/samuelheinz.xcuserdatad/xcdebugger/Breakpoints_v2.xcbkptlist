@@ -18,6 +18,38 @@
             endingLineNumber = "9"
             landmarkName = "unknown"
             landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "CF8894F0-51A4-46E9-BA3D-78711EB4B192 - f0f37e8571f94b35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Quizzler_iOS13.QuizBrain.init(questionNumber: Swift.Int, score: Swift.Int) -&gt; Quizzler_iOS13.QuizBrain"
+                  moduleName = "Quizzler-iOS13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelheinz/Documents/GitHub/xcode/Quizzler-iOS13/Quizzler-iOS13/Model/QuizBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "11">
+               </Location>
+               <Location
+                  uuid = "CF8894F0-51A4-46E9-BA3D-78711EB4B192 - 2c371b228a97eb55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Quizzler_iOS13.QuizBrain.init() -&gt; Quizzler_iOS13.QuizBrain"
+                  moduleName = "Quizzler-iOS13"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/samuelheinz/Documents/GitHub/xcode/Quizzler-iOS13/Quizzler-iOS13/Model/QuizBrain.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
