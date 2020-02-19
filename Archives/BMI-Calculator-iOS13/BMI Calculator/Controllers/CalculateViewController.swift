@@ -10,7 +10,7 @@ import UIKit
 
 class CalculateViewController: UIViewController {
     
-    let calculateBMI = CalculatorBrain.
+    let calculateBMI = CalculatorBrain
     
     var calculatorBrain = CalculatorBrain()
     @IBOutlet weak var heightLabel: UILabel!
